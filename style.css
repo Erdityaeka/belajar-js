@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+
+}
+
+.paragraf01 {
+    font-size: 20 px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.tombol {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: aqua;
+}
+.inline {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: bisque;
+    color: black;
+    font-weight: bold;
+}
+.internal {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: white;
+}
+.eksternal {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: chocolate;
+    color: white;
+}
+.tomboll {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+}

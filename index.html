@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mhs.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Input Nilai Mahasiswa</h2>
+      <form action="" id="mahasiswaForm">
+        <input type="text" name="nama" placeholder="nama" id="nama" />
+        <input type="text" name="nim" placeholder="nim" id="nim" />
+        <input type="text" name="jurusan" placeholder="jurusan" id="jurusan" />
+        <input
+          type="text"
+          name="presensi"
+          placeholder="presensi"
+          id="presensi"
+        />
+        <input type="text" name="tugas" placeholder="tugas" id="tugas" />
+        <input type="text" name="uts" placeholder="uts" id="uts" />
+        <input type="text" name="uas" placeholder="uas" id="uas" />
+        <button type="button" id="submitBtn" onclick="hitung_nilai()">
+          Proses Nilai
+        </button>
+        <p id="errorMessege" style="color: red"></p>
+      </form>
+    </div>
+    <div class="data-container">
+      <h3>Nilai Mahasiswa</h3>
+      <p id="hasil_nim"></p>
+      <p id="hasil_nama"></p>
+      <p id="hasil_jurusan"></p>
+      <p id="absensi"></p>
+      <p id="tgs"></p>
+      <p id="uts"></p>
+      <p id="uas"></p>
+      <p id="rata2"></p>
+      <p id="grade"></p>
+      <p id="h_status"></p>
+      <ul id="mahasiswaList"></ul>
+    </div>
+
+    <script src="mhs.js"></script>
+  </body>
+</html>
