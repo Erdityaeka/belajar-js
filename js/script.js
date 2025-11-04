@@ -6,9 +6,10 @@ function opr() {
   let a = 10;
   let b = 5;
   let c = a + b;
-  console.log("hasil = ", c);
   let pe = a > b;
-  console.log("hasil2 = ", pe);
+  // tampilkan di HTML
+  document.getElementById("output").innerText = "hasil = " + c;
+  document.getElementById("output2").innerText = "hasil2 = " + pe;
 }
 // let nilai = 79;
 // if (nilai >= 75) {
@@ -22,6 +23,7 @@ function opr() {
 //fuction
 function tampilpesan() {
   alert("hello wordd");
+  
 }
 function ceknilai() {
   let nilai = 79;
@@ -39,7 +41,7 @@ function sapa(nama) {
 }
 console.log(sapa("Erditya"));
 
-let sapaa = function(nama) {
+let sapaa = function (nama) {
   return "Halo, " + nama + "!";
 };
 console.log(sapaa("Erditya"));
@@ -63,5 +65,4 @@ let tombol = document.querySelector(".tombol");
 tombol.addEventListener("click", function () {
   paragraf.innerText = "Teks paragraf ini telah berubah setelah tombol di klik";
   paragraf.style.color = "blue";
-  
 });

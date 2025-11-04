@@ -4,45 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="mhs.css" />
+    <link rel="stylesheet" href="style/mhs.css" />
   </head>
   <body>
     <div class="form-container">
-      <h2>Input Nilai Mahasiswa</h2>
+      <h2>Input Data dan  Nilai Mahasiswa</h2>
       <form action="" id="mahasiswaForm">
-        <input type="text" name="nama" placeholder="nama" id="nama" />
-        <input type="text" name="nim" placeholder="nim" id="nim" />
-        <input type="text" name="jurusan" placeholder="jurusan" id="jurusan" />
-        <input
-          type="text"
-          name="presensi"
-          placeholder="presensi"
-          id="presensi"
-        />
-        <input type="text" name="tugas" placeholder="tugas" id="tugas" />
-        <input type="text" name="uts" placeholder="uts" id="uts" />
-        <input type="text" name="uas" placeholder="uas" id="uas" />
+        <label for="nama">Nama</label>
+        <input type="text" name="nama" id="nama" />
+
+        <label for="nim">NIM (harus angka)</label>
+        <input type="text" name="nim" id="nim" />
+
+        <label for="jurusan">Jurusan</label>
+        <input type="text" name="jurusan" id="jurusan" />
+
+        <label for="alamat">Alamat (Min 5 karakter, Max 15 karakter)</label>
+        <input type="text" name="alamat" id="alamat" />
+
+        <label for="email">Email (harus pakai @)</label>
+        <input type="text" name="email" id="email" />
+
+        <label for="telpon">Telepon (contoh: 08123456789 12 digit)</label>
+        <input type="text" name="telpon" id="telpon" />
+
+        <label for="birthDate">Tanggal Lahir (Hari, bulan ,Tahun)</label>
+        <input type="date" name="birthDate" id="birthDate" />
+
+        <label for="presensi">Nilai Presensi</label>
+        <input type="text" name="presensi" id="presensi" />
+
+        <label for="tugas">Nilai Tugas</label>
+        <input type="text" name="tugas" id="tugas" />
+
+        <label for="uts">Nilai UTS</label>
+        <input type="text" name="uts" id="uts" />
+
+        <label for="uas">Nilai UAS</label>
+        <input type="text" name="uas" id="uas" />
+
         <button type="button" id="submitBtn" onclick="hitung_nilai()">
           Proses Nilai
         </button>
-        <p id="errorMessege" style="color: red"></p>
+        <a href="kedua.html"><button type="button">Kedua</button></a>
+        <p id="error-message" style="color: red; font-weight: bold"></p>
       </form>
     </div>
+
     <div class="data-container">
-      <h3>Nilai Mahasiswa</h3>
-      <p id="hasil_nim"></p>
+      <h3>Hasil Data Mahasiswa</h3>
       <p id="hasil_nama"></p>
+      <p id="hasil_nim"></p>
       <p id="hasil_jurusan"></p>
-      <p id="absensi"></p>
-      <p id="tgs"></p>
-      <p id="uts"></p>
-      <p id="uas"></p>
+      <p id="hasil_alamat"></p>
+      <p id="hasil_email"></p>
+      <p id="hasil_telpon"></p>
+      <p id="hasil_birthDate"></p>
+
+
+      <h3>Nilai Akademik</h3>
+      <p id="hasil_presensi"></p>
+      <p id="hasil_tugas"></p>
+      <p id="hasil_uts"></p>
+      <p id="hasil_uas"></p>
       <p id="rata2"></p>
       <p id="grade"></p>
       <p id="h_status"></p>
-      <ul id="mahasiswaList"></ul>
     </div>
 
-    <script src="mhs.js"></script>
+    <script src="js/mhs.js"></script>
   </body>
 </html>

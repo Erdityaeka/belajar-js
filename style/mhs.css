@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #e3e2e2;
+  margin-top: 50px;
+  
+}
+label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.container,
+.data-container {
+  background-color: rgb(237, 255, 167);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  border: 3px solid #000000;
+}
+input,
+select {
+   padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  border: 3px solid #000000;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: green;
+}
