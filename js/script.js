@@ -8,6 +8,8 @@ function opr() {
   let c = a + b;
   let pe = a > b;
   // tampilkan di HTML
+  document.getElementById("nilaia").innerText ="a = " + a;
+  document.getElementById("nilaib").innerText ="b = "+ b;
   document.getElementById("output").innerText = "hasil = " + c;
   document.getElementById("output2").innerText = "hasil2 = " + pe;
 }

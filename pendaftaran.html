@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+    <link rel="stylesheet" href="style/pendaftaran.css">
+</head>
+<body>
+   <div class="form-container">
+     <form action="">
+        <h2>Buat Form 
+            <br>Validasi
+            <br> Pendaftaran</h2>
+        <h3>Form Pendaftaran</h3>
+        <label for="namadepan">Nama Depan</label>
+        <input type="text" name="namadepan" id="namadepan" />
+        <br>
+        <label for="namabelakang">Nama Belakang</label>
+        <input type="text" name="namabelakang" id="namabelakang" />
+        <br>
+        <label for="tempatlahir">Tempat Lahir</label>
+        <input type="text" name="tempatlahir" id="tempatlahir" />
+        <br>
+        <label for="tanggallahir">Tanggal Lahir</label>
+        <input type="text" name="tanggallahir" id="tanggallahir" />
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+        <br>
+        <label for="nohp">No Hp</label>
+        <input type="text" name="nohp" id="nohp" />
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+        <br>
+        <label for="confirmpasword">Confirm Pasword</label>
+        <input type="password" name="confirmpasword" id="confirmpasword" />
+        <br>
+          <button type="button" id="submitBtn" onclick="proses_hasil()">
+          Proses
+        </button>
+         <a href="index.html"><button type="button" class="kembali">Kedua</button></a>
+        <p id="error-message" style="color: red; font-weight: bold"></p>
+    </form>
+   </div>
+    <div class="data-container">
+      <h3>Hasil Pendaftaran Mahasiswa</h3>
+      <p id="hasil_nama_depan"></p>
+      <p id="hasil_nama_belakang"></p>
+      <p id="hasil_tempatlahir"></p>
+      <p id="hasil_tanggallahir"></p>
+      <p id="hasil_email"></p>
+      <p id="hasil_nohp"></p>
+      <p id="hasil_password"></p>
+      <p id="hasil_confirmpasword"></p>
+  <script src="js/pendaftaran.js"></script>
+</body>
+</html>
