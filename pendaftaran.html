@@ -1,50 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran</title>
-    <link rel="stylesheet" href="style/pendaftaran.css">
-</head>
-<body>
-   <div class="form-container">
-     <form action="">
-        <h2>Buat Form 
-            <br>Validasi
-            <br> Pendaftaran</h2>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validasi Pendaftaran</title>
+    <link rel="stylesheet" href="style/pendaftaran.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="">
+        <h2>Buat Form <br />Validasi <br />Pendaftaran</h2>
         <h3>Form Pendaftaran</h3>
+
         <label for="namadepan">Nama Depan</label>
-        <input type="text" name="namadepan" id="namadepan" />
+        <input type="text" id="namadepan" />
         <br>
+        <small id="err-namadepan" style="color: red"></small><br>
+        <br />
+
         <label for="namabelakang">Nama Belakang</label>
-        <input type="text" name="namabelakang" id="namabelakang" />
+        <input type="text" id="namabelakang" />
         <br>
+        <small id="err-namabelakang" style="color: red"></small><br>
+        <br />
+
         <label for="tempatlahir">Tempat Lahir</label>
-        <input type="text" name="tempatlahir" id="tempatlahir" />
+        <input type="text" id="tempatlahir" />
         <br>
+        <small id="err-tempatlahir" style="color: red"></small><br>
+        <br />
+
         <label for="tanggallahir">Tanggal Lahir</label>
-        <input type="date" name="tanggallahir" id="tanggallahir" />
-        
+        <input type="date" id="tanggallahir" />
         <br>
+        <small id="err-tanggallahir" style="color: red"></small><br>
+        <br />
+
         <label for="email">Email</label>
-        <input type="text" name="email" id="email" />
+        <input type="text" id="email" />
         <br>
-        <label for="nohp">No Hp</label>
-        <input type="text" name="nohp" id="nohp" />
+        <small id="err-email" style="color: red"></small><br>
+        <br />
+
+        <label for="nohp">No HP</label>
+        <input type="text" id="nohp" />
         <br>
+        <small id="err-nohp" style="color: red"></small><br>
+        <br />
+
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
+        <input type="password" id="password" />
         <br>
-        <label for="confirmpasword">Confirm Pasword</label>
-        <input type="password" name="confirmpasword" id="confirmpasword" />
+        <small id="err-password" style="color: red"></small><br>
+        <br />
+
+        <label for="confirmpasword">Konfirmasi Password</label>
+        <input type="password" id="confirmpasword" />
         <br>
-          <button type="button" id="submitBtn" onclick="proses_hasil()">
+        <small id="err-confirmpasword" style="color: red"></small><br>
+        <br />
+        <br><br>
+
+        <button type="button" id="submitBtn" onclick="proses_hasil()">
           Proses
         </button>
-         <a href="index.html"><button type="button" class="kembali">Kedua</button></a>
-        <p id="error-message" style="color: red; font-weight: bold"></p>
-    </form>
-   </div>
+        <a href="index.html">
+          <button type="button" class="kembali">Kedua</button>
+        </a>
+      </form>
+    </div>
+
     <div class="data-container">
       <h3>Hasil Pendaftaran Mahasiswa</h3>
       <p id="hasil_nama_depan"></p>
@@ -55,6 +80,8 @@
       <p id="hasil_nohp"></p>
       <p id="hasil_password"></p>
       <p id="hasil_confirmpasword"></p>
-  <script src="js/pendaftaran.js"></script>
-</body>
+    </div>
+
+    <script src="js/pendaftaran.js"></script>
+  </body>
 </html>
