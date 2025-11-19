@@ -10,6 +10,7 @@
   <body>
     <!-- FORM INPUT MAHASISWA -->
     <div class="form-container">
+      <h2>Tugas 04</h2>
       <h2>Form Input Mahasiswa</h2>
 
       <label for="nim">NIM</label>
@@ -24,7 +25,16 @@
       <label for="alamat">Alamat</label>
       <textarea id="alamat" placeholder="Input Alamat"></textarea>
 
-      <button type="button" onclick="addMhs()">Proses</button>
+      <button type="button" id="btnAdd" onclick="addMhs()">Tambah</button>
+      <button
+        type="button"
+        id="btnUpdate"
+        onclick="updateData()"
+        style="display: none"
+      >
+        Update
+      </button>
+      <a href="index.html"><button type="button">Kembali</button></a>
     </div>
 
     <!-- TABEL DATA MAHASISWA -->
@@ -44,6 +54,7 @@
         <tbody id="dataTabel"></tbody>
       </table>
     </div>
+
     <script src="js/render_tabel.js"></script>
   </body>
 </html>

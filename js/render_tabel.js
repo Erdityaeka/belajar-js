@@ -1,9 +1,10 @@
 let mahasiswa = [];
 
-//Fungsi untuk menampilkan daata pada tabel/render tabel
+// Fungsi untuk menampilkan tabel
 function renderTable() {
   const tabelBody = document.getElementById("dataTabel");
   tabelBody.innerHTML = "";
+
   mahasiswa.forEach((item, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -19,7 +20,8 @@ function renderTable() {
     tabelBody.appendChild(row);
   });
 }
-//Membuat fungsi add data Mahasiswa
+
+// Fungsi tambah data
 function addMhs() {
   const nim = document.getElementById("nim").value.trim();
   const nama = document.getElementById("nama").value.trim();
@@ -31,12 +33,52 @@ function addMhs() {
     resetForm();
     renderTable();
   } else {
-    alert("Semua file harus diisi");
+    alert("Semua field harus diisi!");
   }
 }
 
-//Membuat fungsi Reset Form
+//  FUNGSI HAPUS DATA
 
+function deleteData(index) {
+  if (confirm("Yakin ingin menghapus?")) {
+    mahasiswa.splice(index, 1);
+    renderTable();
+  }
+}
+
+//  FUNGSI EDIT DATA
+let editIndex = -1;
+
+function editData(index) {
+  editIndex = index;
+  const item = mahasiswa[index];
+
+  document.getElementById("nim").value = item.nim;
+  document.getElementById("nama").value = item.nama;
+  document.getElementById("tempatlahir").value = item.tempatlahir;
+  document.getElementById("alamat").value = item.alamat;
+  editIndex = index;
+  document.getElementById("btnUpdate").style.display = "inline-block";
+}
+
+function updateData() {
+  const nim = document.getElementById("nim").value.trim();
+  const nama = document.getElementById("nama").value.trim();
+  const tempatlahir = document.getElementById("tempatlahir").value.trim();
+  const alamat = document.getElementById("alamat").value.trim();
+
+  if (nim && nama && tempatlahir && alamat) {
+    mahasiswa[editIndex] = { nim, nama, tempatlahir, alamat };
+    resetForm();
+    renderTable();
+    document.getElementById("btnAdd").style.display = "none";
+    editIndex = null;
+  } else {
+    alert("Semua field harus diisi!");
+  }
+}
+
+// Fungsi reset form input
 function resetForm() {
   document.getElementById("nim").value = "";
   document.getElementById("nama").value = "";
@@ -44,5 +86,5 @@ function resetForm() {
   document.getElementById("alamat").value = "";
 }
 
-//Render tabel awal (kosong)
+// Render awal (kosong)
 renderTable();
